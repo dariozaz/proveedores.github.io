@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proveedores</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <style>
+            html {font-family: sans-serif; text-align: center}
+            body {display: inline-block; text-align: left}
+            *:required, .obligatorio {border: thin solid blue}
+            form em {font-size: small}
+            output {font-weight: bold}
+            footer {font-size: small}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Proveedores</h1>
+        </header>
+        <form id="forma" action="javascript:procesa()">
+            <p><em>el borde azul indica obligatorio</em></p>
+            <p>
+                <label accesskey="C">
+                    Clave
+                    <input name="clave" type="tel" size= "14" autofocus required pattern=".{1,10}" required
+                    maxlength="14" placeholder="1 a 10 digitos">
+                </label>
+                <output id="salidaClave"></output>
+            </p>
+            <p>
+                <label accesskey="N">
+                    Nombre<br>
+                    <input name="nombre" type="text" autofocus required pattern=".{1,30}"
+                           maxlength="30" size="33" placeholder="1 a 30 caracteres">
+                </label>
+                <br><output id="salidaNombre"></output>
+            </p>
+            <p>
+                <label accesskey="T">
+                    Teléfono
+                    <input name="telefono" type="tel" size="16" autofocus required pattern=".{10,14}" required
+                           maxlength="16" placeholder="10 a 14 dígitos">
+                </label>
+                <br><output id="salidaTelefono"></output>
+            </p>
+            <p>
+                <label accesskey="F">
+                    Fecha
+                    <input name="fecha" type="date" autofocus required
+                           max="2021-01-24" min="1999-01-31">
+                </label>
+                <output id="salidaFecha"></output>
+            </p>
+            <p>
+            
+            <p>
+            <input type="submit" value="Procesar" accesskey="P">
+            <input type="reset" value="Limpiar" accesskey="L"></p>
+        </form>
+        <footer>
+            Copyright Dario Andres
+        </footer>
+        <script src="js/Ctrlp.js"></script>
+    </body>
+</html>
