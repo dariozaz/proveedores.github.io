@@ -30,3 +30,25 @@ var forma = document.getElementById("forma"),
         }
         var nombre = forma["nombre"].value;
         //forma["nombre"].value = "Hola "+ nombre;
+               // function procesa(){
+            var fechaValueAsDate = txtFecha.valueAsDate,
+            fecha = new Date(txtFecha.value),
+            hora = new Date("1970-01-01T" + txtHora.value),
+            fechaYHora = new Date(txtFechaYHora.value),
+            fechaYHoraLocal = new Date(txtFechaYHoraLocal.value),
+            semana = txtSemana.valueAsDate,
+            mes = txtMes.valueAsDate;
+           
+            salidaFecha.textContent = txtFecha.type + " | " + txtFecha.value;
+            salidaHora.textContent = txtHora.type + " | " + txtHora.value + "|"
+            + hora.toISOString();
+            salidaFechaYHora.textContent = txtFechaYHora.type + " | " + txtFechaYHora.value + "|"
+            + txtFechaYHora.toISOString();
+            salidaFechaYHoraLocal.textContent = txtFechaYHoraLocal.type + " | " + txtFechaYHoraLocal.value + "|"
+            + txtFechaYHoraLocal.toLocaleString();
+           
+            salidaSemana.textContent = txtSemana.type + " | " + txtSemana.value;
+            salidaMes.textContent = txtMes.type + " | " + txtMes.value;
+           
+        }
+
